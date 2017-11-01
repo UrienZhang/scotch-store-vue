@@ -7,11 +7,11 @@
       </div>
       <div class="form-group">
         <label>Price</label>
-        <input type="number" class="form-control" placeholder="Price" v-model="model.price" name="price" class="form-control" />
+        <input type="number" class="form-control" placeholder="Price" v-model="model.price" name="price" />
       </div>
       <div class="form-group">
         <label>Manufacturer</label>
-        <select type="text" class="form-control" v-model="model.manufacturer" name="manufacturer" class="form-control">
+        <select type="text" class="form-control" v-model="model.manufacturer" name="manufacturer">
           <template v-for="manufacturer in manufacturers">
             <option :value="manufacturer._id" :selected="manufacturer._id == (model.manufacturer && model.manufacturer._id)">{{manufacturer.name}}</option>
           </template>
@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <label>Description</label>
-        <textarea class="form-control" placeholder="Description" rows="5" v-model="model.description" name="description" class="form-control"></textarea>
+        <textarea class="form-control" placeholder="Description" rows="5" v-model="model.description" name="description"></textarea>
       </div>
       <div class="form-group new-button">
         <button class="button">
@@ -43,10 +43,10 @@
 <script>
   export default {
     props: ['model', 'isEditing'],
-  },
-  methods: {
-    saveProduct () {
-      this.$emit('save-product', this.model)
-    }
-  }
+    methods: {
+      saveProduct() {
+        this.$emit('save-product', this.model);
+      },
+    },
+  };
 </script>

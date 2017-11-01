@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "mongoose": "^4.12.5",
     "vee-validate": "^2.0.0-rc.19",
     "vue": "^2.4.2",
     "vue-router": "^2.8.1"
